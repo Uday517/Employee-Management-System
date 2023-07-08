@@ -72,7 +72,7 @@ class EmployeeInterface {
 
     private void writeToFile() {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,true));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
             for (Employee employee : employees) {
                 writer.write(employee.toString());
                 writer.newLine();
