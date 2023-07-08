@@ -72,7 +72,7 @@ class EmployeeInterface {
 
     private void writeToFile() {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,true));
             for (Employee employee : employees) {
                 writer.write(employee.toString());
                 writer.newLine();
@@ -175,7 +175,7 @@ class EmployeeInterface {
         Employee employee = findEmployee(empId);
 
         if (employee != null) {
-            System.out.println("\n ID  \t Name  \t\t Salary");
+            System.out.println("\n ID  \t Name  \t Salary");
             System.out.println(employee);
             System.out.println("\nEmployee record fetched successfully.");
         } else {
